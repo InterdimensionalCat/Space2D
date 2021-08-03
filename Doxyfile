@@ -59,4 +59,4 @@ CLASS_DIAGRAMS         = YES
 HIDE_UNDOC_RELATIONS   = NO
 HAVE_DOT               = NO
 
-#stopped at SHOW_GROUPED_MEMB_INC
+GENERATE_LATEX         = NO
