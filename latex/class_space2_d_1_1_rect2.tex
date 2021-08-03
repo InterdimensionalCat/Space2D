@@ -1,0 +1,447 @@
+\hypertarget{class_space2_d_1_1_rect2}{}\doxysection{Space2D\+::Rect2$<$ T $>$ Class Template Reference}
+\label{class_space2_d_1_1_rect2}\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Rect2.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_space2_d_1_1_rect2_1_1_iterator}{Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_rect2_afa8d104f32506b2c2b536745137d0629}{Rect2}} () noexcept
+\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2_aae5767c5e371fb26f2f67945a9d04ac3}{Rect2}} (const T \&x0, const T \&y0, const T \&x1, const T \&y1) noexcept
+\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2_a2a4bdfcf47b7d09fc98db43010db69bc}{Rect2}} (const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&\mbox{\hyperlink{class_space2_d_1_1_rect2_aa554766f726587ff751e523740f7713f}{min}}, const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&\mbox{\hyperlink{class_space2_d_1_1_rect2_acd4b9096609cf7e73dd2ec32f8ae498f}{max}}) noexcept
+\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2_a12fff05ce6ef9f60e212fce1a9525778}{Rect2}} (const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&\mbox{\hyperlink{class_space2_d_1_1_rect2_aa554766f726587ff751e523740f7713f}{min}}, const \mbox{\hyperlink{class_space2_d_1_1_dim2}{Dim2}}$<$ T $>$ \&dim) noexcept
+\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2_a3833ef2904258b1cf438811f94406d45}{Rect2}} (const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}} \&base\+Rect, const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&min\+Offset, const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&max\+Offset) noexcept
+\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2_a3b403af326ca6e76eb40a8640429ce9d}{Rect2}} (const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}}$<$ T $>$ \&base\+Rect, const \mbox{\hyperlink{class_space2_d_1_1_dim2}{Dim2}}$<$ \mbox{\hyperlink{namespace_space2_d_a9cb3b59b1d491ec9582b11ab96032994}{Percent}} $>$ \&min\+Offset, const \mbox{\hyperlink{class_space2_d_1_1_dim2}{Dim2}}$<$ \mbox{\hyperlink{namespace_space2_d_a9cb3b59b1d491ec9582b11ab96032994}{Percent}} $>$ \&max\+Offset) noexcept
+\item 
+auto \mbox{\hyperlink{class_space2_d_1_1_rect2_a3bdfdfa030ef0beab770941f8d928358}{operator$<$=$>$}} (const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}} \&) const noexcept=default
+\item 
+bool \mbox{\hyperlink{class_space2_d_1_1_rect2_ae8356620427b4b5feb8b895fbe0b4c4d}{operator==}} (const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}} \&other) const noexcept
+\item 
+const T \& \mbox{\hyperlink{class_space2_d_1_1_rect2_ac40bbf6d57a109a94d879b4d0b70ae2f}{operator\mbox{[}$\,$\mbox{]}}} (const size\+\_\+t i) const noexcept
+\item 
+T \& \mbox{\hyperlink{class_space2_d_1_1_rect2_a3b509a768f4530f6da5ac79364bd6c9d}{operator\mbox{[}$\,$\mbox{]}}} (const size\+\_\+t i) noexcept
+\item 
+const size\+\_\+t \mbox{\hyperlink{class_space2_d_1_1_rect2_aecd0143ecc311b86cdeb41abc81d53dd}{num\+Vals}} () const
+\item 
+const \mbox{\hyperlink{struct_space2_d_1_1_rect2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_rect2_a859a950966c698a64219df37c50ee398}{begin}} () const
+\item 
+const \mbox{\hyperlink{struct_space2_d_1_1_rect2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_rect2_a2001dea7eaf3857ace20ea61d7d83137}{end}} () const
+\item 
+\mbox{\hyperlink{struct_space2_d_1_1_rect2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_rect2_aa73ea0f78f7b6d6644a807cf60d20683}{begin}} ()
+\item 
+\mbox{\hyperlink{struct_space2_d_1_1_rect2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_rect2_a3275d4a5d6b08169a4196ea089ab4eef}{end}} ()
+\item 
+T \mbox{\hyperlink{class_space2_d_1_1_rect2_a61fb6c782c8e1624dc87268e11110154}{area}} () const noexcept
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_rect2_a5b7300f11866fe2463915617c2cf9023}{center}} () const noexcept
+\item 
+bool \mbox{\hyperlink{class_space2_d_1_1_rect2_aa876437e02a2c8356a9ddd7408c28c1f}{contains}} (const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&query) const noexcept
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_dim2}{Dim2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_rect2_ae185d06c83f0856464113afcd261e90d}{size}} () const noexcept
+\item 
+T \mbox{\hyperlink{class_space2_d_1_1_rect2_ab67e3201411ef337205f9dcde07662da}{width}} () const noexcept
+\item 
+T \mbox{\hyperlink{class_space2_d_1_1_rect2_a255bb277608fc4301546d36b32e651c4}{height}} () const noexcept
+\item 
+void \mbox{\hyperlink{class_space2_d_1_1_rect2_a246c0f3668d3734aaa2597c17c053d93}{move\+Min\+To}} (const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&new\+Min) noexcept
+\item 
+void \mbox{\hyperlink{class_space2_d_1_1_rect2_aeb973405226c4512489b2f30f37eb1d0}{move\+Center\+To}} (const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&new\+Center) noexcept
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_rect2_a393631d69b76bf572aa3716ee2800c12}{get\+Normal}} (const \mbox{\hyperlink{namespace_space2_d_a4cf948bc8aaba3aab6b5c1a9780dccd0}{Rect\+Face}} type)
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_rect2_acd658e27121fe696cd1b086868b6c6da}{get\+Normal\+\_\+1\+\_\+0}} ()
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_rect2_a895b6b281b6d0e3e720e1d1971fedc98}{get\+Normal\+\_\+neg1\+\_\+0}} ()
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_rect2_ad2211bf23377e1a59d9e4609a4252b51}{get\+Normal\+\_\+0\+\_\+1}} ()
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_rect2_acaf62366e940bd97bfb6068dff2c062e}{get\+Normal\+\_\+0\+\_\+neg1}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_rect2_aa554766f726587ff751e523740f7713f}{min}}
+\item 
+\mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_rect2_acd4b9096609cf7e73dd2ec32f8ae498f}{max}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_space2_d_1_1_rect2_ab0320d4f3ac5969750023c1c2660999f}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}}$<$ T $>$ \&it)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Space2\+D\+::\+Rect2$<$ T $>$}
+
+
+
+Definition at line 26 of file Rect2.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_afa8d104f32506b2c2b536745137d0629}\label{class_space2_d_1_1_rect2_afa8d104f32506b2c2b536745137d0629}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!Rect2@{Rect2}}
+\index{Rect2@{Rect2}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rect2()}{Rect2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 32 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_aae5767c5e371fb26f2f67945a9d04ac3}\label{class_space2_d_1_1_rect2_aae5767c5e371fb26f2f67945a9d04ac3}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!Rect2@{Rect2}}
+\index{Rect2@{Rect2}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rect2()}{Rect2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}} (\begin{DoxyParamCaption}\item[{const T \&}]{x0,  }\item[{const T \&}]{y0,  }\item[{const T \&}]{x1,  }\item[{const T \&}]{y1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 34 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a2a4bdfcf47b7d09fc98db43010db69bc}\label{class_space2_d_1_1_rect2_a2a4bdfcf47b7d09fc98db43010db69bc}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!Rect2@{Rect2}}
+\index{Rect2@{Rect2}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rect2()}{Rect2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&}]{min,  }\item[{const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 37 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a12fff05ce6ef9f60e212fce1a9525778}\label{class_space2_d_1_1_rect2_a12fff05ce6ef9f60e212fce1a9525778}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!Rect2@{Rect2}}
+\index{Rect2@{Rect2}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rect2()}{Rect2()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&}]{min,  }\item[{const \mbox{\hyperlink{class_space2_d_1_1_dim2}{Dim2}}$<$ T $>$ \&}]{dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 41 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a3833ef2904258b1cf438811f94406d45}\label{class_space2_d_1_1_rect2_a3833ef2904258b1cf438811f94406d45}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!Rect2@{Rect2}}
+\index{Rect2@{Rect2}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rect2()}{Rect2()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}}$<$ T $>$ \&}]{base\+Rect,  }\item[{const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&}]{min\+Offset,  }\item[{const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&}]{max\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 53 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a3b403af326ca6e76eb40a8640429ce9d}\label{class_space2_d_1_1_rect2_a3b403af326ca6e76eb40a8640429ce9d}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!Rect2@{Rect2}}
+\index{Rect2@{Rect2}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rect2()}{Rect2()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}}$<$ T $>$ \&}]{base\+Rect,  }\item[{const \mbox{\hyperlink{class_space2_d_1_1_dim2}{Dim2}}$<$ \mbox{\hyperlink{namespace_space2_d_a9cb3b59b1d491ec9582b11ab96032994}{Percent}} $>$ \&}]{min\+Offset,  }\item[{const \mbox{\hyperlink{class_space2_d_1_1_dim2}{Dim2}}$<$ \mbox{\hyperlink{namespace_space2_d_a9cb3b59b1d491ec9582b11ab96032994}{Percent}} $>$ \&}]{max\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 58 of file Rect2.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a61fb6c782c8e1624dc87268e11110154}\label{class_space2_d_1_1_rect2_a61fb6c782c8e1624dc87268e11110154}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!area@{area}}
+\index{area@{area}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 92 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_aa73ea0f78f7b6d6644a807cf60d20683}\label{class_space2_d_1_1_rect2_aa73ea0f78f7b6d6644a807cf60d20683}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_space2_d_1_1_rect2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 90 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a859a950966c698a64219df37c50ee398}\label{class_space2_d_1_1_rect2_a859a950966c698a64219df37c50ee398}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \mbox{\hyperlink{struct_space2_d_1_1_rect2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 90 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a5b7300f11866fe2463915617c2cf9023}\label{class_space2_d_1_1_rect2_a5b7300f11866fe2463915617c2cf9023}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!center@{center}}
+\index{center@{center}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{center()}{center()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 96 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_aa876437e02a2c8356a9ddd7408c28c1f}\label{class_space2_d_1_1_rect2_aa876437e02a2c8356a9ddd7408c28c1f}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!contains@{contains}}
+\index{contains@{contains}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&}]{query }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 100 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a3275d4a5d6b08169a4196ea089ab4eef}\label{class_space2_d_1_1_rect2_a3275d4a5d6b08169a4196ea089ab4eef}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!end@{end}}
+\index{end@{end}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_space2_d_1_1_rect2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 90 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a2001dea7eaf3857ace20ea61d7d83137}\label{class_space2_d_1_1_rect2_a2001dea7eaf3857ace20ea61d7d83137}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!end@{end}}
+\index{end@{end}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \mbox{\hyperlink{struct_space2_d_1_1_rect2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 90 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a393631d69b76bf572aa3716ee2800c12}\label{class_space2_d_1_1_rect2_a393631d69b76bf572aa3716ee2800c12}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_space2_d_a4cf948bc8aaba3aab6b5c1a9780dccd0}{Rect\+Face}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 131 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_ad2211bf23377e1a59d9e4609a4252b51}\label{class_space2_d_1_1_rect2_ad2211bf23377e1a59d9e4609a4252b51}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!getNormal\_0\_1@{getNormal\_0\_1}}
+\index{getNormal\_0\_1@{getNormal\_0\_1}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getNormal\_0\_1()}{getNormal\_0\_1()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::get\+Normal\+\_\+0\+\_\+1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 153 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_acaf62366e940bd97bfb6068dff2c062e}\label{class_space2_d_1_1_rect2_acaf62366e940bd97bfb6068dff2c062e}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!getNormal\_0\_neg1@{getNormal\_0\_neg1}}
+\index{getNormal\_0\_neg1@{getNormal\_0\_neg1}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getNormal\_0\_neg1()}{getNormal\_0\_neg1()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::get\+Normal\+\_\+0\+\_\+neg1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 157 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_acd658e27121fe696cd1b086868b6c6da}\label{class_space2_d_1_1_rect2_acd658e27121fe696cd1b086868b6c6da}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!getNormal\_1\_0@{getNormal\_1\_0}}
+\index{getNormal\_1\_0@{getNormal\_1\_0}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getNormal\_1\_0()}{getNormal\_1\_0()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::get\+Normal\+\_\+1\+\_\+0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 145 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a895b6b281b6d0e3e720e1d1971fedc98}\label{class_space2_d_1_1_rect2_a895b6b281b6d0e3e720e1d1971fedc98}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!getNormal\_neg1\_0@{getNormal\_neg1\_0}}
+\index{getNormal\_neg1\_0@{getNormal\_neg1\_0}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getNormal\_neg1\_0()}{getNormal\_neg1\_0()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::get\+Normal\+\_\+neg1\+\_\+0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 149 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a255bb277608fc4301546d36b32e651c4}\label{class_space2_d_1_1_rect2_a255bb277608fc4301546d36b32e651c4}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!height@{height}}
+\index{height@{height}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 115 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_aeb973405226c4512489b2f30f37eb1d0}\label{class_space2_d_1_1_rect2_aeb973405226c4512489b2f30f37eb1d0}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!moveCenterTo@{moveCenterTo}}
+\index{moveCenterTo@{moveCenterTo}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{moveCenterTo()}{moveCenterTo()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::move\+Center\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&}]{new\+Center }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 125 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a246c0f3668d3734aaa2597c17c053d93}\label{class_space2_d_1_1_rect2_a246c0f3668d3734aaa2597c17c053d93}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!moveMinTo@{moveMinTo}}
+\index{moveMinTo@{moveMinTo}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{moveMinTo()}{moveMinTo()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::move\+Min\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&}]{new\+Min }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 119 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_aecd0143ecc311b86cdeb41abc81d53dd}\label{class_space2_d_1_1_rect2_aecd0143ecc311b86cdeb41abc81d53dd}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!numVals@{numVals}}
+\index{numVals@{numVals}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{numVals()}{numVals()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const size\+\_\+t \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::num\+Vals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 86 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a3bdfdfa030ef0beab770941f8d928358}\label{class_space2_d_1_1_rect2_a3bdfdfa030ef0beab770941f8d928358}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!operator$<$=$>$@{operator$<$=$>$}}
+\index{operator$<$=$>$@{operator$<$=$>$}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=$>$()}{operator<=>()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::operator$<$=$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}}$<$ T $>$ \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_ae8356620427b4b5feb8b895fbe0b4c4d}\label{class_space2_d_1_1_rect2_ae8356620427b4b5feb8b895fbe0b4c4d}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 65 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_ac40bbf6d57a109a94d879b4d0b70ae2f}\label{class_space2_d_1_1_rect2_ac40bbf6d57a109a94d879b4d0b70ae2f}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 69 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_a3b509a768f4530f6da5ac79364bd6c9d}\label{class_space2_d_1_1_rect2_a3b509a768f4530f6da5ac79364bd6c9d}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 77 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_ae185d06c83f0856464113afcd261e90d}\label{class_space2_d_1_1_rect2_ae185d06c83f0856464113afcd261e90d}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!size@{size}}
+\index{size@{size}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_dim2}{Dim2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 107 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_ab67e3201411ef337205f9dcde07662da}\label{class_space2_d_1_1_rect2_ab67e3201411ef337205f9dcde07662da}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!width@{width}}
+\index{width@{width}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Definition at line 111 of file Rect2.\+h.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_ab0320d4f3ac5969750023c1c2660999f}\label{class_space2_d_1_1_rect2_ab0320d4f3ac5969750023c1c2660999f}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_space2_d_1_1_rect2}{Rect2}}$<$ T $>$ \&}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 185 of file Rect2.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_acd4b9096609cf7e73dd2ec32f8ae498f}\label{class_space2_d_1_1_rect2_acd4b9096609cf7e73dd2ec32f8ae498f}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!max@{max}}
+\index{max@{max}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::max}
+
+
+
+Definition at line 203 of file Rect2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_rect2_aa554766f726587ff751e523740f7713f}\label{class_space2_d_1_1_rect2_aa554766f726587ff751e523740f7713f}} 
+\index{Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}!min@{min}}
+\index{min@{min}!Space2D::Rect2$<$ T $>$@{Space2D::Rect2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_rect2}{Space2\+D\+::\+Rect2}}$<$ T $>$\+::min}
+
+
+
+Definition at line 202 of file Rect2.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_mat3_8h}{Mat3.\+h}}\item 
+include/\mbox{\hyperlink{_rect2_8h}{Rect2.\+h}}\end{DoxyCompactItemize}

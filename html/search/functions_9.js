@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['lerp_235',['lerp',['../namespace_space2_d.html#a8bbb53ba8fadac573e26fdc28bc5a43e',1,'Space2D::lerp()'],['../_s2_d_math_8h.html#a0353325bb9e13e6b6c6ec4f93cf1f5a0',1,'lerp():&#160;S2DMath.h']]],
+  ['lineartype_236',['LinearType',['../class_space2_d_1_1_linear_type.html#abd8c71d09eb32cb443d57dd5ac3d2b12',1,'Space2D::LinearType::LinearType() noexcept'],['../class_space2_d_1_1_linear_type.html#aa51ffddfb4884a7e565f0af706f6ec16',1,'Space2D::LinearType::LinearType(const T &amp;value) noexcept'],['../class_space2_d_1_1_linear_type.html#ab6a3901509810b15849f227a48eac606',1,'Space2D::LinearType::LinearType(const Linear &amp;other) noexcept'],['../class_space2_d_1_1_linear_type.html#aa85ce9067296ed3111a45e5bdaa1f0fd',1,'Space2D::LinearType::LinearType(const long double &amp;value) noexcept'],['../class_space2_d_1_1_linear_type.html#abcae568a9720e54ed4fd9452836450a5',1,'Space2D::LinearType::LinearType(const unsigned long long &amp;value) noexcept']]],
+  ['linrefl_237',['linRefl',['../class_space2_d_1_1_mat3.html#a9efa4545eca7910de54df61955783aab',1,'Space2D::Mat3::linRefl(const Vec2&lt; T &gt; &amp;lineSlope) noexcept'],['../class_space2_d_1_1_mat3.html#a53dccb7b516b542ca70523c915804d4e',1,'Space2D::Mat3::linRefl(const Vec2&lt; T &gt; &amp;lineSlope, const Point2&lt; T &gt; &amp;intercept) noexcept']]]
+];

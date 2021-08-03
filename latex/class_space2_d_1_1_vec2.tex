@@ -1,0 +1,817 @@
+\hypertarget{class_space2_d_1_1_vec2}{}\doxysection{Space2D\+::Vec2$<$ T $>$ Class Template Reference}
+\label{class_space2_d_1_1_vec2}\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+
+
+Class encapsulating a 2 Dimensional Vector representation.  
+
+
+
+
+{\ttfamily \#include $<$Vec2.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_c_iterator}{CIterator}}
+\begin{DoxyCompactList}\small\item\em Read only iterator for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em Read and write iterator for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2_a693eeb73ac6cbc5242d73617fff3f44f}{Vec2}} () noexcept
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} of size (0,0) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2_ac7fad3a0379b045a62d0a5b8ff9bafaa}{Vec2}} (const T \&\mbox{\hyperlink{class_space2_d_1_1_vec2_a515a83da9b13e318449961c95f32f8b2}{x}}, const T \&\mbox{\hyperlink{class_space2_d_1_1_vec2_aa1576747462a88b9fbbab943ebc82010}{y}}) noexcept
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} of size (x, y) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2_a846717474dbe59ae686fe6c4ffeea850}{Vec2}} (const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} directly from a \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2_a867d4e776952c50d134ff8429ddd4ee5}{Vec2}} (const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&start, const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&\mbox{\hyperlink{class_space2_d_1_1_vec2_a291b3e90540ec8360da4d2d4e936e00f}{end}}) noexcept
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} as a displacement vector from point start to end. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a38669737673ea9516b3ba6c93fb6c4c7}{operator-\/}} () const noexcept
+\begin{DoxyCompactList}\small\item\em (x, y) -\/$>$ (-\/x, -\/y) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2_af6f751015108feb7236a1568b0d89492}{operator+}} () const noexcept
+\begin{DoxyCompactList}\small\item\em (x, y) -\/$>$ (+x, +y) \end{DoxyCompactList}\item 
+constexpr const T \& \mbox{\hyperlink{class_space2_d_1_1_vec2_aa4628eb49be6da358b695f5e44192291}{operator\mbox{[}$\,$\mbox{]}}} (const size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em Access the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} coords as if it were an array. \end{DoxyCompactList}\item 
+constexpr T \& \mbox{\hyperlink{class_space2_d_1_1_vec2_a95a7974d57dfc396af9b00720dd44a0e}{operator\mbox{[}$\,$\mbox{]}}} (const size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Access the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} coords as if it were an array. \end{DoxyCompactList}\item 
+constexpr const size\+\_\+t \mbox{\hyperlink{class_space2_d_1_1_vec2_a826f9d62bfda7a973b96cb6fc8f3b9a6}{num\+Vals}} () const
+\item 
+constexpr const size\+\_\+t \mbox{\hyperlink{class_space2_d_1_1_vec2_a57cb015e3e759f8791df9f65ff394c3b}{size}} () const
+\begin{DoxyCompactList}\small\item\em the size of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}, always 2 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_c_iterator}{CIterator}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a18dc7b1b8e7ea8b9b544c3b728ceed1f}{cbegin}} () const
+\begin{DoxyCompactList}\small\item\em Beginning of the \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} range. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_c_iterator}{CIterator}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a617fd5bc39a82d135d138417113421a9}{cend}} () const
+\begin{DoxyCompactList}\small\item\em One past the end of the \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a5154f3bc4b153122ecd9d77cb7d1e968}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Beginning of the \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a291b3e90540ec8360da4d2d4e936e00f}{end}} ()
+\begin{DoxyCompactList}\small\item\em One past the end of the \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} range. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{class_space2_d_1_1_vec2_aca1d4b573e6bfd56b40b3ddc2bc1f236}{operator$<$=$>$}} (const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \&other) const noexcept=default
+\begin{DoxyCompactList}\small\item\em Comparison operators for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}, sorted by x coordinate then y coordinate. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_space2_d_1_1_vec2_a7e112fdfd67ec4abeb5b55d4e2e4c3d4}{operator==}} (const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Equality operator for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. \end{DoxyCompactList}\item 
+constexpr T \mbox{\hyperlink{class_space2_d_1_1_vec2_a634ff810d510bb9a90840f48ca5968d4}{mag}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Magnitude of a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. \end{DoxyCompactList}\item 
+constexpr T \mbox{\hyperlink{class_space2_d_1_1_vec2_a73a0b8f3b7689ec508fa0494900d9f1c}{mag\+Squared}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Magnitude$^\wedge$2 of a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_vec2_a9b56df292e752253f117242bb739bd9d}{normalize}} () const
+\begin{DoxyCompactList}\small\item\em normalizes the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \mbox{\hyperlink{class_space2_d_1_1_vec2_ab02ddcf1fd9d2314798b2b6016ce3915}{unit\+Normal}} () const
+\begin{DoxyCompactList}\small\item\em calculates a unit normal vector, which is a normal vector perpindicular to the supplied vector \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \& \mbox{\hyperlink{class_space2_d_1_1_vec2_a91753086652a02c325925624d09cfc66}{operator-\/=}} (const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em subtract-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a0c1f736a6f6ead94cccf1761ce8ea5b6}{operator-\/}} (const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&rhs) const noexcept
+\begin{DoxyCompactList}\small\item\em subtract for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \& \mbox{\hyperlink{class_space2_d_1_1_vec2_a2ab105aa27f34a276be97c20ddba54cc}{operator-\/=}} (const \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em subtract-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a9d0f91a2e88b32194e90286acbdd5a87}{operator-\/}} (const \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \&rhs) const noexcept
+\begin{DoxyCompactList}\small\item\em subtract for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \& \mbox{\hyperlink{class_space2_d_1_1_vec2_a210b4ac9f32bdef4d55d84d1e25168d0}{operator+=}} (const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em addition-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a34cd0db0921cdbf4640f07c8642b0044}{operator+}} (const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&rhs) const noexcept
+\begin{DoxyCompactList}\small\item\em addition for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \& \mbox{\hyperlink{class_space2_d_1_1_vec2_af5d8cf490d07af98238748e82316ed99}{operator+=}} (const \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em addition-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a9b9dcd11c982d491e95e137127a5acde}{operator+}} (const \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \&rhs) const noexcept
+\begin{DoxyCompactList}\small\item\em addition for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \& \mbox{\hyperlink{class_space2_d_1_1_vec2_a9945cf49421c80dc69ae44a74c52c2c8}{operator$\ast$=}} (const T \&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em multiplication-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2_af8cc376aa4ed4a2caf0c19fffaea65bd}{operator$\ast$}} (const T \&rhs) const noexcept
+\begin{DoxyCompactList}\small\item\em multiplication for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \& \mbox{\hyperlink{class_space2_d_1_1_vec2_ac987a86b375a7fb4188e3bf254b60344}{operator/=}} (const T \&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em division-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2_a5f8df3fb0b44f26b815cf22828f859a9}{operator/}} (const T \&rhs) const noexcept
+\begin{DoxyCompactList}\small\item\em division for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{class_space2_d_1_1_vec2_a515a83da9b13e318449961c95f32f8b2}{x}}
+\begin{DoxyCompactList}\small\item\em x coordinate of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_space2_d_1_1_vec2_aa1576747462a88b9fbbab943ebc82010}{y}}
+\begin{DoxyCompactList}\small\item\em y coordinate of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_space2_d_1_1_vec2_a20b0ae3189b465ff2f95a602949d9665}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&it)
+\begin{DoxyCompactList}\small\item\em Prints the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Space2\+D\+::\+Vec2$<$ T $>$}
+
+Class encapsulating a 2 Dimensional Vector representation. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Underlying data type of the coordinates \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 49 of file Vec2.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a693eeb73ac6cbc5242d73617fff3f44f}\label{class_space2_d_1_1_vec2_a693eeb73ac6cbc5242d73617fff3f44f}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!Vec2@{Vec2}}
+\index{Vec2@{Vec2}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vec2()}{Vec2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} of size (0,0) 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 58 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_ac7fad3a0379b045a62d0a5b8ff9bafaa}\label{class_space2_d_1_1_vec2_ac7fad3a0379b045a62d0a5b8ff9bafaa}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!Vec2@{Vec2}}
+\index{Vec2@{Vec2}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vec2()}{Vec2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} (\begin{DoxyParamCaption}\item[{const T \&}]{x,  }\item[{const T \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} of size (x, y) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} x coordinate \\
+\hline
+{\em y} & \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a846717474dbe59ae686fe6c4ffeea850}\label{class_space2_d_1_1_vec2_a846717474dbe59ae686fe6c4ffeea850}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!Vec2@{Vec2}}
+\index{Vec2@{Vec2}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vec2()}{Vec2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} directly from a \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The point to construct from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a867d4e776952c50d134ff8429ddd4ee5}\label{class_space2_d_1_1_vec2_a867d4e776952c50d134ff8429ddd4ee5}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!Vec2@{Vec2}}
+\index{Vec2@{Vec2}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vec2()}{Vec2()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::\mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&}]{start,  }\item[{const \mbox{\hyperlink{class_space2_d_1_1_point2}{Point2}}$<$ T $>$ \&}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Constructs a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} as a displacement vector from point start to end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Starting point \\
+\hline
+{\em end} & Ending point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Vec2.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a5154f3bc4b153122ecd9d77cb7d1e968}\label{class_space2_d_1_1_vec2_a5154f3bc4b153122ecd9d77cb7d1e968}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Beginning of the \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} range. 
+
+\begin{DoxyReturn}{Returns}
+An iterator at the beginning of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+\end{DoxyReturn}
+
+
+Definition at line 215 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a18dc7b1b8e7ea8b9b544c3b728ceed1f}\label{class_space2_d_1_1_vec2_a18dc7b1b8e7ea8b9b544c3b728ceed1f}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_c_iterator}{CIterator}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Beginning of the \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} range. 
+
+\begin{DoxyReturn}{Returns}
+A const iterator at the beginning of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+\end{DoxyReturn}
+
+
+Definition at line 199 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a617fd5bc39a82d135d138417113421a9}\label{class_space2_d_1_1_vec2_a617fd5bc39a82d135d138417113421a9}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!cend@{cend}}
+\index{cend@{cend}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_c_iterator}{CIterator}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+One past the end of the \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} range. 
+
+\begin{DoxyReturn}{Returns}
+A const iterator one past the end of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+\end{DoxyReturn}
+
+
+Definition at line 207 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a291b3e90540ec8360da4d2d4e936e00f}\label{class_space2_d_1_1_vec2_a291b3e90540ec8360da4d2d4e936e00f}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!end@{end}}
+\index{end@{end}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+One past the end of the \mbox{\hyperlink{struct_space2_d_1_1_vec2_1_1_iterator}{Iterator}} range. 
+
+\begin{DoxyReturn}{Returns}
+An iterator one past the end of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+\end{DoxyReturn}
+
+
+Definition at line 223 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a634ff810d510bb9a90840f48ca5968d4}\label{class_space2_d_1_1_vec2_a634ff810d510bb9a90840f48ca5968d4}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!mag@{mag}}
+\index{mag@{mag}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mag()}{mag()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::mag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Magnitude of a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. 
+
+\begin{DoxyReturn}{Returns}
+the magnitude 
+\end{DoxyReturn}
+
+
+Definition at line 248 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a73a0b8f3b7689ec508fa0494900d9f1c}\label{class_space2_d_1_1_vec2_a73a0b8f3b7689ec508fa0494900d9f1c}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!magSquared@{magSquared}}
+\index{magSquared@{magSquared}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{magSquared()}{magSquared()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::mag\+Squared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Magnitude$^\wedge$2 of a \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. 
+
+\begin{DoxyReturn}{Returns}
+The square magnitude 
+\end{DoxyReturn}
+
+
+Definition at line 256 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a9b56df292e752253f117242bb739bd9d}\label{class_space2_d_1_1_vec2_a9b56df292e752253f117242bb739bd9d}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!normalize@{normalize}}
+\index{normalize@{normalize}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+normalizes the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} pointing in the direction of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+\end{DoxyReturn}
+
+
+Definition at line 264 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a826f9d62bfda7a973b96cb6fc8f3b9a6}\label{class_space2_d_1_1_vec2_a826f9d62bfda7a973b96cb6fc8f3b9a6}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!numVals@{numVals}}
+\index{numVals@{numVals}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{numVals()}{numVals()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr const size\+\_\+t \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::num\+Vals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 120 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_af8cc376aa4ed4a2caf0c19fffaea65bd}\label{class_space2_d_1_1_vec2_af8cc376aa4ed4a2caf0c19fffaea65bd}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const T \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+multiplication for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the factor to multiply by \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 371 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a9945cf49421c80dc69ae44a74c52c2c8}\label{class_space2_d_1_1_vec2_a9945cf49421c80dc69ae44a74c52c2c8}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}\& \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const T \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+multiplication-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the factor to multiply by \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 365 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_af6f751015108feb7236a1568b0d89492}\label{class_space2_d_1_1_vec2_af6f751015108feb7236a1568b0d89492}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+(x, y) -\/$>$ (+x, +y) 
+
+\begin{DoxyReturn}{Returns}
+the sign-\/positive \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a9b9dcd11c982d491e95e137127a5acde}\label{class_space2_d_1_1_vec2_a9b9dcd11c982d491e95e137127a5acde}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+addition for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the addition \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 359 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a34cd0db0921cdbf4640f07c8642b0044}\label{class_space2_d_1_1_vec2_a34cd0db0921cdbf4640f07c8642b0044}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+addition for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the addition \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 347 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_af5d8cf490d07af98238748e82316ed99}\label{class_space2_d_1_1_vec2_af5d8cf490d07af98238748e82316ed99}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}\& \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+addition-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the addition \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 353 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a210b4ac9f32bdef4d55d84d1e25168d0}\label{class_space2_d_1_1_vec2_a210b4ac9f32bdef4d55d84d1e25168d0}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}\& \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+addition-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the addition \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 341 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a38669737673ea9516b3ba6c93fb6c4c7}\label{class_space2_d_1_1_vec2_a38669737673ea9516b3ba6c93fb6c4c7}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+(x, y) -\/$>$ (-\/x, -\/y) 
+
+\begin{DoxyReturn}{Returns}
+the sign-\/negative \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a9d0f91a2e88b32194e90286acbdd5a87}\label{class_space2_d_1_1_vec2_a9d0f91a2e88b32194e90286acbdd5a87}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+subtract for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the subtraction \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 334 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a0c1f736a6f6ead94cccf1761ce8ea5b6}\label{class_space2_d_1_1_vec2_a0c1f736a6f6ead94cccf1761ce8ea5b6}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+subtract for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the subtraction \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 322 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a2ab105aa27f34a276be97c20ddba54cc}\label{class_space2_d_1_1_vec2_a2ab105aa27f34a276be97c20ddba54cc}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}\& \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+subtract-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the subtraction \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 328 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a91753086652a02c325925624d09cfc66}\label{class_space2_d_1_1_vec2_a91753086652a02c325925624d09cfc66}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}\& \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+subtract-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} with \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the subtraction \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 316 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a5f8df3fb0b44f26b815cf22828f859a9}\label{class_space2_d_1_1_vec2_a5f8df3fb0b44f26b815cf22828f859a9}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator/ (\begin{DoxyParamCaption}\item[{const T \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+division for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the divisor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 383 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_ac987a86b375a7fb4188e3bf254b60344}\label{class_space2_d_1_1_vec2_ac987a86b375a7fb4188e3bf254b60344}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}\& \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator/= (\begin{DoxyParamCaption}\item[{const T \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+division-\/eq for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the divisor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 377 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_aca1d4b573e6bfd56b40b3ddc2bc1f236}\label{class_space2_d_1_1_vec2_aca1d4b573e6bfd56b40b3ddc2bc1f236}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator$<$=$>$@{operator$<$=$>$}}
+\index{operator$<$=$>$@{operator$<$=$>$}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=$>$()}{operator<=>()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr auto \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator$<$=$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Comparison operators for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}, sorted by x coordinate then y coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a7e112fdfd67ec4abeb5b55d4e2e4c3d4}\label{class_space2_d_1_1_vec2_a7e112fdfd67ec4abeb5b55d4e2e4c3d4}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Equality operator for \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}\textquotesingle{}s are equal 
+\end{DoxyReturn}
+
+
+Definition at line 240 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a95a7974d57dfc396af9b00720dd44a0e}\label{class_space2_d_1_1_vec2_a95a7974d57dfc396af9b00720dd44a0e}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T\& \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Access the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} coords as if it were an array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index, 0 = x and 1 = y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a read and write reference to the coordinate 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_aa4628eb49be6da358b695f5e44192291}\label{class_space2_d_1_1_vec2_aa4628eb49be6da358b695f5e44192291}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr const T\& \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Access the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} coords as if it were an array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index, 0 = x and 1 = y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a read only reference to the coordinate 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a57cb015e3e759f8791df9f65ff394c3b}\label{class_space2_d_1_1_vec2_a57cb015e3e759f8791df9f65ff394c3b}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!size@{size}}
+\index{size@{size}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr const size\+\_\+t \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+the size of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}, always 2 
+
+\begin{DoxyReturn}{Returns}
+the size of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_ab02ddcf1fd9d2314798b2b6016ce3915}\label{class_space2_d_1_1_vec2_ab02ddcf1fd9d2314798b2b6016ce3915}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!unitNormal@{unitNormal}}
+\index{unitNormal@{unitNormal}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{unitNormal()}{unitNormal()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{class_space2_d_1_1_norm_vec2}{Norm\+Vec2}}$<$T$>$ \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::unit\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+calculates a unit normal vector, which is a normal vector perpindicular to the supplied vector 
+
+\begin{DoxyReturn}{Returns}
+the unit normal vector\+: unit normal rule\+: (x, y) -\/$>$ (y, -\/x) 
+\end{DoxyReturn}
+
+
+Definition at line 273 of file Vec2.\+h.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a20b0ae3189b465ff2f95a602949d9665}\label{class_space2_d_1_1_vec2_a20b0ae3189b465ff2f95a602949d9665}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}$<$ T $>$ \&}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Prints the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Input stream \\
+\hline
+{\em it} & The vector to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Document this better lol \end{DoxyRefDesc}
+
+
+Definition at line 298 of file Vec2.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_a515a83da9b13e318449961c95f32f8b2}\label{class_space2_d_1_1_vec2_a515a83da9b13e318449961c95f32f8b2}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!x@{x}}
+\index{x@{x}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::x}
+
+
+
+x coordinate of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+
+Definition at line 389 of file Vec2.\+h.
+
+\mbox{\Hypertarget{class_space2_d_1_1_vec2_aa1576747462a88b9fbbab943ebc82010}\label{class_space2_d_1_1_vec2_aa1576747462a88b9fbbab943ebc82010}} 
+\index{Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}!y@{y}}
+\index{y@{y}!Space2D::Vec2$<$ T $>$@{Space2D::Vec2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_space2_d_1_1_vec2}{Space2\+D\+::\+Vec2}}$<$ T $>$\+::y}
+
+
+
+y coordinate of the \mbox{\hyperlink{class_space2_d_1_1_vec2}{Vec2}} 
+
+
+
+Definition at line 394 of file Vec2.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_dim2_8h}{Dim2.\+h}}\item 
+include/\mbox{\hyperlink{_vec2_8h}{Vec2.\+h}}\end{DoxyCompactItemize}

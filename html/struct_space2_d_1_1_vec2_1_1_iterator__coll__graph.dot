@@ -1,0 +1,14 @@
+digraph "Space2D::Vec2&lt; T &gt;::Iterator"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Space2D::Vec2\< T \>\l::Iterator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Read and write iterator for Vec2."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" val" ,fontname="Helvetica"];
+  Node2 [label="Space2D::Vec2\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_space2_d_1_1_vec2.html",tooltip="Class encapsulating a 2 Dimensional Vector representation."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" x\ny" ,fontname="Helvetica"];
+  Node3 [label="T",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" index" ,fontname="Helvetica"];
+  Node4 [label="size_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}
