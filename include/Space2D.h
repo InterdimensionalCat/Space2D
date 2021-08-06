@@ -7,6 +7,8 @@
 #include "AngularType.h"
 #include "LinearType.h"
 
+#include "S2DMath.h"
+
 #include "Point2.h"
 #include "Vec2.h"
 #include "Dim2.h"
@@ -15,7 +17,6 @@
 #include "Poly2.h"
 #include "Mat3.h"
 #include "S2DMacros.h"
-#include "S2DMath.h"
 
 namespace Space2D {
     using Point2f = Point2<float>;

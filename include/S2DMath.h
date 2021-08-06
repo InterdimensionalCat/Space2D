@@ -11,7 +11,7 @@ namespace Space2D {
 #define S2D_STDMATH_FN(fn)\
 	template<typename T>\
 	constexpr inline T fn(const T a) noexcept {\
-		return static_cast<T>(std::##fn(static_cast<double>(a)));\
+		return (T)(std::##fn((double)a));\
 	}
 #endif
 

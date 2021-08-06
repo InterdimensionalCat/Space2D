@@ -148,30 +148,30 @@ operator lhstyp<T>(rhstyp<T>& rhs) {\
 	}
 #endif
 
-    S2D_OP_MINUS_PLUS(Point2, Vec2)
-    S2D_OP_MINUS_PLUS(Point2, NormVec2)
-	S2D_OP_MINUS_PLUS(Point2, Point2)
-	S2D_OP_MINUS_PLUS(Point2, Dim2)
+    //S2D_OP_MINUS_PLUS(Point2, Vec2)
+    //S2D_OP_MINUS_PLUS(Point2, NormVec2)
+	//S2D_OP_MINUS_PLUS(Point2, Point2)
+	//S2D_OP_MINUS_PLUS(Point2, Dim2)
 
 	//S2D_OP_MINUS_PLUS(Vec2, Vec2)
 	//S2D_OP_MINUS_PLUS(Vec2, NormVec2)
 
-	S2D_OP_MINUS_PLUS_RET_VEC(NormVec2, Vec2)
-	S2D_OP_MINUS_PLUS_RET_VEC(NormVec2, NormVec2)
+	//S2D_OP_MINUS_PLUS_RET_VEC(NormVec2, Vec2)
+	//S2D_OP_MINUS_PLUS_RET_VEC(NormVec2, NormVec2)
 
-	S2D_OP_MINUS_PLUS(Dim2, Vec2)
-	S2D_OP_MINUS_PLUS(Dim2, NormVec2)
-	S2D_OP_MINUS_PLUS(Dim2, Dim2)
+	//S2D_OP_MINUS_PLUS(Dim2, Vec2)
+	//S2D_OP_MINUS_PLUS(Dim2, NormVec2)
+	//S2D_OP_MINUS_PLUS(Dim2, Dim2)
 
-	S2D_OP_SCALE(Point2)
-	S2D_OP_SCALE(Vec2)
-	S2D_OP_SCALE_RET_VEC(NormVec2)
-	S2D_OP_SCALE(Dim2)
+	//S2D_OP_SCALE(Point2)
+	//S2D_OP_SCALE(Vec2)
+	//S2D_OP_SCALE_RET_VEC(NormVec2)
+	//S2D_OP_SCALE(Dim2)
 
-	S2D_OP_DOT(Vec2, Vec2)
-	S2D_OP_DOT(Vec2, NormVec2)
-	S2D_OP_DOT(NormVec2, NormVec2)
-	S2D_OP_DOT(NormVec2, Vec2)
+	//S2D_OP_DOT(Vec2, Vec2)
+	//S2D_OP_DOT(Vec2, NormVec2)
+	//S2D_OP_DOT(NormVec2, NormVec2)
+	//S2D_OP_DOT(NormVec2, Vec2)
 
     S2D_OPS_ITR(Rect2, Vec2, +)
     S2D_OPS_ITR(Rect2, Vec2, -)
@@ -184,17 +184,6 @@ operator lhstyp<T>(rhstyp<T>& rhs) {\
     S2D_OPS_ITR(Poly2, NormVec2, -)
 
 
-	template<typename T>
-	constexpr Dim2<T> operator*(const Dim2<T>& lhs, const Dim2<T>& rhs) noexcept {
-		return Dim2<T>(lhs.x * rhs.x, lhs.y * rhs.y);
-	}
-
-    template<typename T>
-    constexpr Dim2<T>& operator*=(Dim2<T>& lhs, const Dim2<T>& rhs) noexcept {
-        lhs.x *= rhs.x;
-        lhs.y *= rhs.y;
-        return lhs;
-    }
 #undef S2D_OP_MINUS_PLUS
 #undef S2D_OP_MINUS_PLUS_RET_VEC
 

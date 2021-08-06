@@ -1,5 +1,4 @@
 #pragma once
-#include "S2DIterator.h"
 
 
 #ifndef S2D_VEC_2D_OPERATOR
@@ -42,7 +41,7 @@ namespace Space2D {
 
 
 	/**
-	 * @brief Class encapsulating a 2 Dimensional Vector representation
+	 * @brief Class encapsulating a 2 Dimensional vector representation
 	 * @tparam T Underlying data type of the coordinates
 	*/
 	template<typename T>
@@ -53,7 +52,7 @@ namespace Space2D {
 
 		/**
 		 * @brief Constructs a Vec2 of size (0,0)
-		 * @return 
+		 * 
 		*/
 		constexpr Vec2() noexcept : x(), y() {}
 
@@ -61,14 +60,14 @@ namespace Space2D {
 		 * @brief Constructs a Vec2 of size (x, y)
 		 * @param x Vec2 x coordinate
 		 * @param y Vec2 y coordinate
-		 * @return 
+		 * 
 		*/
 		constexpr explicit Vec2(const T& x, const T& y) noexcept : x(x), y(y) {}
 
 		/**
 		 * @brief Constructs a Vec2 directly from a Point2
 		 * @param other The point to construct from
-		 * @return 
+		 * 
 		*/
 		constexpr explicit Vec2(const Point2<T>& other) noexcept : Vec2(other.x, other.y) {}
 
@@ -76,7 +75,7 @@ namespace Space2D {
 		 * @brief Constructs a Vec2 as a displacement vector from point start to end
 		 * @param start Starting point
 		 * @param end Ending point
-		 * @return 
+		 *  
 		*/
 		constexpr explicit Vec2(const Point2<T>& start, const Point2<T>& end) noexcept : Vec2(end.x - start.x, end.y - start.y) {}
 
@@ -115,18 +114,6 @@ namespace Space2D {
 		constexpr T& operator[] (const size_t i){
 			if (i > 1) throw std::out_of_range("Vec2 subscript out of range");
 			return i == 0 ? x : y;
-		}
-
-		constexpr const size_t numVals() const {
-			return 2;
-		}
-
-		/**
-		 * @brief the size of the Vec2, always 2
-		 * @return the size of the Vec2
-		*/
-		constexpr const size_t size() const {
-			return 2;
 		}
 
 		/**
@@ -227,7 +214,7 @@ namespace Space2D {
 		/**
 		 * @brief Comparison operators for Vec2, sorted by x coordinate then y coordinate
 		 * @param other The Vec2 to compare with
-		 * @return 
+		 * 
 		*/
 		constexpr auto operator<=>(const Vec2& other) const noexcept = default;
 
@@ -238,7 +225,7 @@ namespace Space2D {
 		 * @return true if the two Vec2's are equal
 		*/
 		constexpr bool operator==(const Vec2& other) const noexcept {
-			return std::abs(x - other.x) < 1e-6 && std::abs(y - other.y) < 1e-6;
+			return std::abs((double)(x - other.x)) < epsilon && std::abs((double)(y - other.y)) < epsilon;
 		}
 
 		/**
@@ -274,13 +261,69 @@ namespace Space2D {
 			return NormVec2<T>(y, -x);
 		}
 
+		/**
+		 * @brief Calculates the dot product two Vec2's
+		 * @param rhs the other Vec2 to calculate with
+		 * @return the dot product scalar
+		*/
+		T dot(const Vec2<T>& rhs) const noexcept {
+			return x * rhs.x + y * rhs.y; 
+		}
+
+		/**
+		 * @brief Calculates the dot product two Vec2's
+		 * @param rhs the other NormVec2 to calculate with
+		 * @return the dot product scalar
+		*/
+		T dot(const NormVec2<T>& rhs) const noexcept {
+			return x * rhs.x + y * rhs.y; 
+		}
+
+		/**
+		 * @brief checks if the two vectors are perpindicular
+		 * @param rhs the other Vec2 to calculate with
+		 * @return returns true if the two vectors are perpindicular
+		*/
+		bool perp(const Vec2<T>& rhs) const noexcept {
+			return std::abs((double)dot(rhs)) < epsilon;
+		}
+
+		/**
+		 * @brief checks if the two vectors are perpindicular
+		 * @param rhs the other NormVec2 to calculate with
+		 * @return returns true if the two vectors are perpindicular
+		*/
+		bool perp(const NormVec2<T>& rhs) const noexcept {
+			return std::abs((double)dot(rhs)) < epsilon;
+		}
+
+		/**
+		 * @brief Implicit conversion to other Vec2 types
+		 * @tparam Other the underlying data type of the Vec2 to convert to
+		*/
+		template<typename Other>
+		explicit operator Vec2<Other>() const {
+			return Vec2<Other>((Other)x, (Other)y);
+		}
+
 #ifdef _SFML_ENABLED
 
+
+		/**
+		 * @brief Implicit conversion function to an sf::Vector2
+		 * @tparam SFMLType the template param for the desired sf::Vector2
+		 * @return The sf::Vector2 equivalent of this Vec2
+		*/
 		template<typename SFMLType>
 		constexpr operator sf::Vector2<SFMLType>() const noexcept {
 			return toSFMLVec<SFMLType>();
 		}
 
+		/**
+		 * @brief Explicit conversion function to an sf::Vector2
+		 * @tparam SFMLType the template param for the desired sf::Vector2
+		 * @return The sf::Vector2 equivalent of this Vec2
+		*/
 		template <typename SFMLType = float>
 		constexpr sf::Vector2<SFMLType> toSFMLVec() const noexcept {
 			return sf::Vector2<SFMLType>(static_cast<SFMLType>(this->x), static_cast<SFMLType>(this->y));
@@ -291,10 +334,10 @@ namespace Space2D {
 		/**
 		 * @brief Prints the Vec2
 		 * @param os Input stream
-		 * @param it The vector to print
+		 * @param it The Vec2 to print
 		 * @return a reference to the stream for << chaining
 		*/
-		friend std::ostream& operator << (std::ostream& os, const Vec2<T>& it) {
+		friend std::ostream& operator << (std::ostream& os, const Vec2& it) {
 			std::string typname = typeid(T).name();
 			std::string::size_type i = typname.find("struct");
 			if (i != std::string::npos) {
@@ -398,4 +441,3 @@ namespace Space2D {
 #undef S2D_VEC_2D_OP_EQ
 #undef S2D_VEC_1D_OP
 #undef S2D_VEC_1D_OP_EQ
-#undef S2D_VEC_2D_OPERATOR

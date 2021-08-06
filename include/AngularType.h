@@ -28,10 +28,14 @@ namespace Space2D {
 		using Angular = AngularType<T, Tag, Ratio>;
 
 		constexpr AngularType() noexcept : value(0) {}
-		constexpr explicit AngularType(const T& value) noexcept : value(value) {}
-		constexpr explicit AngularType(const Angular& other) noexcept 
+		constexpr AngularType(const T& value) noexcept : value(value) {}
+		constexpr AngularType(const Angular& other) noexcept
 			: value(other.value) {}
-		constexpr explicit AngularType(const long double& value) noexcept 
+		constexpr explicit AngularType(const long double& value) noexcept
+			: value(static_cast<T>(value)) {}
+		constexpr explicit AngularType(const unsigned long long& value) noexcept
+			: value(static_cast<T>(value)) {}
+		constexpr explicit AngularType(const double& value) noexcept
 			: value(static_cast<T>(value)) {}
 
 		T& get() noexcept { return value; }
@@ -47,7 +51,11 @@ namespace Space2D {
 			return std::abs(value - other.value) < epsilon;
 		}
 
-		explicit operator T() const {
+		explicit operator double() const {
+			return value;
+		}
+
+		explicit operator float() const {
 			return value;
 		}
 

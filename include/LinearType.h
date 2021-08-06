@@ -15,8 +15,8 @@
   however, 1.0 percent will print as "100%" for clarity
 */
 
-#ifndef _PIXEL_TO_METER
-#define _PIXEL_TO_METER 64;
+#ifndef S2D_PIXEL_TO_METER
+#define S2D_PIXEL_TO_METER 64
 #endif
 
 namespace Space2D {
@@ -30,10 +30,12 @@ namespace Space2D {
 		using Linear = LinearType<T, Tag, Ratio>;
 
 		constexpr LinearType() noexcept : value(0) {}
-		constexpr explicit LinearType(const T& value) noexcept : value(value) {}
-		constexpr explicit LinearType(const Linear& other) noexcept
+		constexpr LinearType(const T& value) noexcept : value(value) {}
+		constexpr LinearType(const Linear& other) noexcept
 			: value(other.value) {}
 		constexpr explicit LinearType(const long double& value) noexcept
+			: value(static_cast<T>(value)) {}
+		constexpr explicit LinearType(const double& value) noexcept
 			: value(static_cast<T>(value)) {}
 		constexpr explicit LinearType(const unsigned long long & value) noexcept
 			: value(static_cast<T>(value)) {}
@@ -52,8 +54,12 @@ namespace Space2D {
 			return std::abs(value - other.value) < epsilon;
 		}
 
-		explicit operator T() const {
-			return value;
+		explicit operator double() const {
+			return (double)value;
+		}
+
+		explicit operator float() const {
+			return (float)value;
 		}
 
 #ifndef S2D_LINEAR_OPERATOR
@@ -99,7 +105,9 @@ namespace Space2D {
 	using Pixels = LinType<std::ratio<1, 1>>;
 
 	//1 pixel = _PIXEL_TO_METER meters
-	using Meters = LinType<std::ratio<64, 1>>;
+	//using Meters = LinType<std::ratio<64, 1>>;
+
+	using Meters = LinType<std::ratio< S2D_PIXEL_TO_METER , 1>>;
 
 	inline Pixels operator"" _px(const long double d) noexcept {
 		return Pixels(d);
@@ -128,14 +136,12 @@ namespace Space2D {
 		return os;
 	}
 
-	static float floatToMeters(const float pixels) {
-		return pixels / _PIXEL_TO_METER;
+	static float toMeters(const float pixels) {
+		return pixels / S2D_PIXEL_TO_METER;
 	}
 
-	static float floatToPixels(const float pixels) {
-		return pixels * _PIXEL_TO_METER;
+	static float toPixels(const float meters) {
+		return meters * S2D_PIXEL_TO_METER;
 	}
 
 }
-
-#undef _PIXEL_TO_METER

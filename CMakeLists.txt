@@ -87,6 +87,10 @@ FetchContent_MakeAvailable(googletest)
     target_link_libraries(${PROJECT_NAME}_TEST PRIVATE gtest_main)
 
     add_test(VecTest ${PROJECT_NAME}_TEST VecTest)
+    add_test(PointTest ${PROJECT_NAME}_TEST PointTest)
+    add_test(DimTest ${PROJECT_NAME}_TEST DimTest)
+    add_test(NormVecTest ${PROJECT_NAME}_TEST NormVecTest)
+    add_test(RectTest ${PROJECT_NAME}_TEST RectTest)
 
     #add_test(Test1 ${PROJECT_NAME}_TEST Test1)
     #add_test(Test2 ${PROJECT_NAME}_TEST Test2)
