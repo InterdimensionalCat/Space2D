@@ -19,6 +19,11 @@ namespace Space2D {
     template<typename T>
     class Rect2;
 
+    /**
+     * @brief Class encapsulating a 2 Dimensional convex polygon representation
+     * @details although there is nothing expresedly checking or garunteeing
+     * @tparam T 
+    */
     template<typename T>
     class Poly2
     {

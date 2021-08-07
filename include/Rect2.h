@@ -43,7 +43,7 @@ namespace Space2D {
 
     /**
 	 * @brief Class encapsulating a 2 Dimensional Axis Aligned Rectangle representation
-     * unlike some other Rectangle representations, Rect2 defines an AABB as a maximum and minimum
+     * @details unlike some other Rectangle representations, Rect2 defines an AABB as a maximum and minimum
      * point (where minimum is top left)
 	 * @tparam T Underlying data type of the coordinates for each point
 	*/

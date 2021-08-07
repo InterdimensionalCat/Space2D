@@ -148,6 +148,35 @@ namespace Space2D {
 		}
 
 		/**
+		 * @brief 2 Dimensional cross product with NormVec2
+		 * @param rhs the NormVec2 to cross this NormVec2 with
+		 * @return the cross product scalar
+		*/
+		constexpr T cross(const NormVec2& rhs) const noexcept {
+			return x * rhs.y - y * rhs.x;
+		}
+
+	    /**
+		 * @brief 2 Dimensional cross product with Vec2
+		 * @param rhs the Vec2 to cross this NormVec2 with
+		 * @return the cross product scalar
+		*/
+		constexpr T cross(const Vec2<T>& rhs) const noexcept {
+			return x * rhs.y - y * rhs.x;
+		}
+
+		/**
+		 * @brief 2 Dimensional cross product with Scalar
+		 * @details note that this cross product produces a
+		 * CCW facing Vec2 outward according to the right hand rule
+		 * @param rhs the scalar to cross this Vec2 with
+		 * @return the cross product vector
+		*/
+		constexpr Vec2<T> cross(const T& rhs) const noexcept {
+			return Vec2<T>(rhs * y, -rhs * x);
+		}
+
+		/**
 		 * @brief checks if the two vectors are perpindicular
 		 * @param rhs the other NormVec2 to calculate with
 		 * @return returns true if the two vectors are perpindicular

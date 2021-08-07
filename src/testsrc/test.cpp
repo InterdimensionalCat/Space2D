@@ -228,6 +228,10 @@ TEST(VecTest, VecOps) {
 	ASSERT_EQ(Vec2f(1.0, 2.0).dot(Vec2f(-3.0, 4.0)), 5);
 	ASSERT_EQ(Vec2f(1.0, 2.0).dot(NormVec2f(-3.0, 4.0)), 1);
 
+	ASSERT_EQ(Vec2f(1, 2).cross(Vec2f(3, -1)), -7);
+	ASSERT_EQ(Vec2f(1, 2).cross(NormVec2f(1, 0)), -2);
+	ASSERT_EQ(Vec2f(1, 2).cross(2), Vec2f(4, -2));
+
 	ASSERT_TRUE(Vec2f(1.0, 2.0).perp(Vec2f(-2.0, 1.0)));
 	ASSERT_FALSE(Vec2f(1.0, 2.0).perp(NormVec2f(-3.0, 4.0)));
 
@@ -410,6 +414,10 @@ TEST(NormVecTest, NormVecComp) {
 TEST(NormVecTest, NormVecOps) {
 	ASSERT_EQ(NormVec2f(0.0, 1.0).dot(NormVec2f(0.0, 4.0)), 1);
 	ASSERT_EQ(NormVec2f(1.0, 0.0).dot(Vec2f(-3.0, 4.0)), -3);
+
+	ASSERT_EQ(NormVec2f(1, 0).cross(Vec2f(1, 2)), 2);
+	ASSERT_EQ(NormVec2f(1, 0).cross(NormVec2f(0, 1)), 1);
+	ASSERT_EQ(NormVec2f(1, 0).cross(2), Vec2f(0, -2));
 
 	ASSERT_TRUE(NormVec2f(1.0, 2.0).perp(NormVec2f(-2.0, 1.0)));
 	ASSERT_FALSE(NormVec2f(1.0, 2.0).perp(Vec2f(-3.0, 4.0)));

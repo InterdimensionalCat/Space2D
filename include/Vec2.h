@@ -266,7 +266,7 @@ namespace Space2D {
 		 * @param rhs the other Vec2 to calculate with
 		 * @return the dot product scalar
 		*/
-		T dot(const Vec2<T>& rhs) const noexcept {
+		constexpr T dot(const Vec2<T>& rhs) const noexcept {
 			return x * rhs.x + y * rhs.y; 
 		}
 
@@ -275,8 +275,37 @@ namespace Space2D {
 		 * @param rhs the other NormVec2 to calculate with
 		 * @return the dot product scalar
 		*/
-		T dot(const NormVec2<T>& rhs) const noexcept {
+		constexpr T dot(const NormVec2<T>& rhs) const noexcept {
 			return x * rhs.x + y * rhs.y; 
+		}
+
+		/**
+		 * @brief 2 Dimensional cross product with Vec2
+		 * @param rhs the Vec2 to cross this Vec2 with
+		 * @return the cross product scalar
+		*/
+		constexpr T cross(const Vec2& rhs) const noexcept {
+			return x * rhs.y - y * rhs.x;
+		}
+
+		/**
+		 * @brief 2 Dimensional cross product with NormVec2
+		 * @param rhs the NormVec2 to cross this Vec2 with
+		 * @return the cross product scalar
+		*/
+		constexpr T cross(const NormVec2<T>& rhs) const noexcept {
+			return x * rhs.y - y * rhs.x;
+		}
+
+		/**
+		 * @brief 2 Dimensional cross product with Scalar
+		 * @details note that this cross product produces a
+		 * CCW facing Vec2 outward according to the right hand rule
+		 * @param rhs the scalar to cross this Vec2 with
+		 * @return the cross product vector
+		*/
+		constexpr Vec2 cross(const T& rhs) const noexcept {
+			return Vec2(rhs * y, -rhs * x);
 		}
 
 		/**
