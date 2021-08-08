@@ -310,10 +310,24 @@ namespace Space2D {
          * @details determines if a point is within the Rect2 or not, 
          * @param qx the x coordinate of the query Point2
          * @param qy the y coordinate of the query Point2
+         * @todo make an intersects function for Rect2 and Poly2
          * @return true if the query Point2 is within the Rect2
         */
         constexpr bool contains(const T& qx, const T& qy) const noexcept {
             return contains(Point2<T>(qx, qy));
+        }
+
+        /**
+         * @brief determines if two Rect2's intersect
+         * @param b the other Rect2 to check with
+         * @return true if the Rect2's intersect
+        */
+        constexpr bool intersects(const Rect2& b) const noexcept {
+
+            if (max.x < b.min.x || min.x > b.max.x) return false;
+            if (max.y < b.min.y || min.y > b.max.y) return false;
+
+            return true;
         }
 
         /**
@@ -412,7 +426,7 @@ namespace Space2D {
         /**
          * @brief Get the two points that make up the supplied face of the Rect2
          * @param type The face to get the points of
-         * @return The points of the supplied face
+         * @return The points of the supplied face, in a sorted array
          * @todo Make a class representing both lines and line segments to make Rect2 and
          * Poly2 faces more robust and functional
         */
@@ -440,7 +454,7 @@ namespace Space2D {
 
         /**
          * @brief Get a Vec2 of the points in the supplied face in the COUNTERCLOCKWISE DIRECTION
-         * @param type The face to get the points of
+         * @param type The face to get the Vec2 of
          * @return The Vec2 representing the supplied face
         */
         constexpr Vec2<T> getFaceVec(const RectFace type) const noexcept {
@@ -483,7 +497,7 @@ namespace Space2D {
         }
 
         /**
-         * @brief Implicit conversion to other Rect2 types
+         * @brief Explicit conversion to other Rect2 types
          * @tparam Other the underlying data type of the Rect2 to convert to
         */
         template<typename Other>
@@ -515,16 +529,12 @@ namespace Space2D {
             sf::Vector2<SFMLType> v2 = sf::Vector2<SFMLType>(static_cast<SFMLType>(width()), static_cast<SFMLType>(height()));
             return sf::Rect<SFMLType>(v1, v2);
         }
-        
-        //
-        //however, section that is the "interior color" will never get clipped due to a large border size
-
 
         /**
          * @brief Creates a sf::RectangleShape (a drawable rectangle)
          * @param borderSize the size of the sf::RectangleShape border
          * border size strictly adds to the size, so the RectangleShape 
-         * will only retain the same dimensions as the s2d::Rect if border is 0.0f,
+         * will only retain the same dimensions as the s2d::Rect2 if border is 0.0f,
          * however the interior area(and interior color) will 
          * always be the same dimensions as the original Rect2
          * @param interiorColor the interior color of the sf::RectangleShape

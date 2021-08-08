@@ -9,14 +9,13 @@
 
 #include "S2DMath.h"
 
+#include "Mat3.h"
 #include "Point2.h"
 #include "Vec2.h"
 #include "Dim2.h"
 #include "NormVec2.h"
 #include "Rect2.h"
 #include "Poly2.h"
-#include "Mat3.h"
-#include "S2DMacros.h"
 
 namespace Space2D {
     using Point2f = Point2<float>;

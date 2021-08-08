@@ -7,16 +7,23 @@ namespace Space2D {
 		return a + t * (b - a);
 	}
 
+	template<typename T>
+	using not_angular = std::enable_if<
+		!std::is_same<T, Radians>::value &&
+		!std::is_same<T, Degrees>::value &&
+		!std::is_same<T, Percent>::value
+	>;
+	//using not_angular = std::enable_if<!std::is_same<T, Radians>::value>>;// && !std::is_same<T, Degrees> && !std::is_same<T, Percent>>;
+
 #ifndef S2D_STDMATH_FN
 #define S2D_STDMATH_FN(fn)\
 	template<typename T>\
-	constexpr inline T fn(const T a) noexcept {\
+	inline T fn(const T a) noexcept {\
 		return (T)(std::##fn((double)a));\
 	}
 #endif
 
-	S2D_STDMATH_FN(cos)
-	S2D_STDMATH_FN(sin)
+
 	S2D_STDMATH_FN(sqrt)
 	S2D_STDMATH_FN(abs)
 	//template<typename T>
@@ -28,6 +35,14 @@ namespace Space2D {
 	//constexpr inline T sin(const T a) noexcept {
 	//	return static_cast<T>(std::sin(static_cast<double>(a)));
 	//}
+
+	inline float cos(const Radians a) noexcept {
+		return std::cos(a.get());
+	}
+
+	inline float sin(const Radians a) noexcept {
+		return std::sin(a.get());
+	}
 }
 
 //standard linear interpolation

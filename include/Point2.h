@@ -91,7 +91,7 @@ namespace Space2D {
 		 * @param other The Point2 to compare with
 		 * 
 		*/
-        constexpr auto operator<=>(const Point2<T>&) const noexcept = default;
+		constexpr auto operator<=>(const Point2<T>& other) const noexcept = default;
 
         /**
 		 * @brief Equality operator for Point2

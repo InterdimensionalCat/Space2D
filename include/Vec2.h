@@ -88,7 +88,7 @@ namespace Space2D {
 			return Vec2<T>(-x, -y);
 		}
 
-				/**
+		/**
 		 * @brief (x, y) -> (+x, +y)
 		 * @return the sign-positive Vec2
 		*/
@@ -214,7 +214,6 @@ namespace Space2D {
 		/**
 		 * @brief Comparison operators for Vec2, sorted by x coordinate then y coordinate
 		 * @param other The Vec2 to compare with
-		 * 
 		*/
 		constexpr auto operator<=>(const Vec2& other) const noexcept = default;
 

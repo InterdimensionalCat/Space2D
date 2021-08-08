@@ -91,6 +91,8 @@ FetchContent_MakeAvailable(googletest)
     add_test(DimTest ${PROJECT_NAME}_TEST DimTest)
     add_test(NormVecTest ${PROJECT_NAME}_TEST NormVecTest)
     add_test(RectTest ${PROJECT_NAME}_TEST RectTest)
+    add_test(PolyTest ${PROJECT_NAME}_TEST PolyTest)
+    add_test(MatTest ${PROJECT_NAME}_TEST MatTest)
 
     #add_test(Test1 ${PROJECT_NAME}_TEST Test1)
     #add_test(Test2 ${PROJECT_NAME}_TEST Test2)

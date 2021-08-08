@@ -173,15 +173,15 @@ operator lhstyp<T>(rhstyp<T>& rhs) {\
 	//S2D_OP_DOT(NormVec2, NormVec2)
 	//S2D_OP_DOT(NormVec2, Vec2)
 
-    S2D_OPS_ITR(Rect2, Vec2, +)
-    S2D_OPS_ITR(Rect2, Vec2, -)
-    S2D_OPS_ITR(Rect2, NormVec2, +)
-    S2D_OPS_ITR(Rect2, NormVec2, -)
+    //S2D_OPS_ITR(Rect2, Vec2, +)
+    //S2D_OPS_ITR(Rect2, Vec2, -)
+    //S2D_OPS_ITR(Rect2, NormVec2, +)
+    //S2D_OPS_ITR(Rect2, NormVec2, -)
 
-    S2D_OPS_ITR(Poly2, Vec2, +)
-    S2D_OPS_ITR(Poly2, Vec2, -)
-    S2D_OPS_ITR(Poly2, NormVec2, +)
-    S2D_OPS_ITR(Poly2, NormVec2, -)
+    //S2D_OPS_ITR(Poly2, Vec2, +)
+    //S2D_OPS_ITR(Poly2, Vec2, -)
+    //S2D_OPS_ITR(Poly2, NormVec2, +)
+    //S2D_OPS_ITR(Poly2, NormVec2, -)
 
 
 #undef S2D_OP_MINUS_PLUS
