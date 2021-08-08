@@ -56,6 +56,18 @@ add_library(${PROJECT_NAME} INTERFACE)
 #target_include_directories (${PROJECT_NAME} PUBLIC ${LIBRARY_INCLUDE_DIR})
 
 
+#setting up config.cmake
+set(INCLUDE_INSTALL_DIR ${CMAKE_CURRENT_LIST_DIR}/include/)
+set(LIB_INSTALL_DIR ${LIB_INSTALL_DIR}/lib/)
+
+include(CMakePackageConfigHelpers)
+configure_package_config_file(Space2DConfig.cmake.in
+  ${CMAKE_CURRENT_BINARY_DIR}/Space2DConfig.cmake
+  INSTALL_DESTINATION ${LIB_INSTALL_DIR}/Space2D/cmake
+  PATH_VARS INCLUDE_INSTALL_DIR)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/Space2DConfig.cmake
+        DESTINATION ${LIB_INSTALL_DIR}/Space2D/cmake )
+
 if(GENERATE_DRIVER)
 set(SFML_STATIC_LIBRARIES FALSE)
     file(GLOB DRIVER_SRC "${DRIVER_SRC_DIR}/*.cpp")
