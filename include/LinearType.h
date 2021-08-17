@@ -75,7 +75,7 @@ namespace Space2D {
         value op##= (T)rhs;\
         return *this;\
 	}\
-	constexpr inline Linear& operator##op(const T& rhs) const noexcept { \
+	constexpr inline Linear operator##op(const T& rhs) const noexcept { \
 	    return Linear(value op (T)rhs);\
 	}
 #endif
@@ -109,31 +109,8 @@ namespace Space2D {
 
 	using Meters = LinType<std::ratio< S2D_PIXEL_TO_METER , 1>>;
 
-	inline Pixels operator"" _px(const long double d) noexcept {
-		return Pixels(d);
-	}
+	namespace literals {
 
-	inline Pixels operator"" _px(const unsigned long long d) noexcept {
-		return Pixels(d);
-	}
-
-	inline Meters operator"" _mtr(const long double d) noexcept {
-		return Meters(d);
-	}
-
-	inline Meters operator"" _mtr(const unsigned long long d) noexcept {
-		return Meters(d);
-	}
-
-
-	inline std::ostream& operator << (std::ostream& os, const Pixels& it) {
-		os << it.get() << "_px";
-		return os;
-	}
-
-	inline std::ostream& operator << (std::ostream& os, const Meters& it) {
-		os << it.get() << "_mtr";
-		return os;
 	}
 
 	static float toMeters(const float pixels) {
@@ -144,4 +121,32 @@ namespace Space2D {
 		return meters * S2D_PIXEL_TO_METER;
 	}
 
+}
+
+
+inline Space2D::Pixels operator"" _px(const long double d) noexcept {
+	return Space2D::Pixels(d);
+}
+
+inline Space2D::Pixels operator"" _px(const unsigned long long d) noexcept {
+	return Space2D::Pixels(d);
+}
+
+inline Space2D::Meters operator"" _mtr(const long double d) noexcept {
+	return Space2D::Meters(d);
+}
+
+inline Space2D::Meters operator"" _mtr(const unsigned long long d) noexcept {
+	return Space2D::Meters(d);
+}
+
+
+inline std::ostream& operator << (std::ostream& os, const Space2D::Pixels& it) {
+	os << it.get() << "_px";
+	return os;
+}
+
+inline std::ostream& operator << (std::ostream& os, const Space2D::Meters& it) {
+	os << it.get() << "_mtr";
+	return os;
 }

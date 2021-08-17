@@ -18,6 +18,9 @@
 #include "Poly2.h"
 
 namespace Space2D {
+
+    using namespace Space2D::literals;
+
     using Point2f = Point2<float>;
     using Vec2f = Vec2<float>;
     using Dim2f = Dim2<float>;

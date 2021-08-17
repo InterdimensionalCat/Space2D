@@ -109,84 +109,83 @@ namespace Space2D {
 
 	//2pi radians = 100%
 	using Percent = AngType<std::ratio<31415926535897932, 5000000000000000>>;
+}
 
-	inline Radians operator"" _rad(const long double d) noexcept {
-		return Radians(d);
-	}
+inline Space2D::Radians operator"" _rad(const long double d) noexcept {
+	return Space2D::Radians(d);
+}
 
-	inline Radians operator"" _pirad(const long double d) noexcept {
-		return Radians(d * 3.1415926535897932);
-	}
+inline Space2D::Radians operator"" _pirad(const long double d) noexcept {
+	return Space2D::Radians(d * 3.1415926535897932);
+}
 
-	inline Degrees operator"" _deg(const long double d) noexcept {
-		return Degrees(d);
-	}
-	inline Percent operator"" _pcent(const long double d) noexcept {
-		return Percent(static_cast<long double>(d / 100.0));
-	}
+inline Space2D::Degrees operator"" _deg(const long double d) noexcept {
+	return Space2D::Degrees(d);
+}
+inline Space2D::Percent operator"" _pcent(const long double d) noexcept {
+	return Space2D::Percent(static_cast<long double>(d / 100.0));
+}
 
-	inline Radians operator"" _rad(const unsigned long long d) noexcept {
-		return Radians(static_cast<long double>(d));
-	}
+inline Space2D::Radians operator"" _rad(const unsigned long long d) noexcept {
+	return Space2D::Radians(static_cast<long double>(d));
+}
 
-	inline Radians operator"" _pirad(const unsigned long long d) noexcept {
-		return Radians(static_cast<long double>(d) * 3.1415926535897932);
-	}
+inline Space2D::Radians operator"" _pirad(const unsigned long long d) noexcept {
+	return Space2D::Radians(static_cast<long double>(d) * 3.1415926535897932);
+}
 
-	inline Degrees operator"" _deg(const unsigned long long d) noexcept {
-		return Degrees(static_cast<long double>(d));
-	}
+inline Space2D::Degrees operator"" _deg(const unsigned long long d) noexcept {
+	return Space2D::Degrees(static_cast<long double>(d));
+}
 
-	inline Percent operator"" _pcent(const unsigned long long d) noexcept {
-		return Percent(static_cast<long double>(d / 100.0));
-	}
+inline Space2D::Percent operator"" _pcent(const unsigned long long d) noexcept {
+	return Space2D::Percent(static_cast<long double>(d / 100.0));
+}
 
-	inline std::ostream& operator << (std::ostream& os, const Radians& it) {
-		double pie_ratio = (it / 180_deg).get();
-		if (pie_ratio == 1) {
-			os << "pi radians";
-			return os;
-		}
-
-		if (pie_ratio == 0) {
-			os << "0 radians";
-			return os;
-		}
-
-		long precisison = 1000;
-
-		long gcdnum = std::gcd((long)round(pie_ratio * precisison), precisison);
-
-		double numerator = (pie_ratio * precisison) / (double)gcdnum;
-		long denominator = precisison / gcdnum;
-
-		if (abs(numerator - 1) < 1e-6) {
-			os << "pi" << "/" << denominator << " radians";
-			return os;
-		}
-
-		if (denominator == 1) {
-			os << numerator << "pi radians";
-			return os;
-		}
-
-		if (gcdnum == 1) {
-			os << pie_ratio << "pi radians";
-			return os;
-		}
-
-		os << numerator << "pi/" << denominator << " radians";
+inline std::ostream& operator << (std::ostream& os, const Space2D::Radians& it) {
+	double pie_ratio = (it / 180_deg).get();
+	if (pie_ratio == 1) {
+		os << "pi Space2D::Radians";
 		return os;
 	}
 
-	inline std::ostream& operator << (std::ostream& os, const Degrees& it) {
-		os << it.get() << " degrees";
+	if (pie_ratio == 0) {
+		os << "0 Space2D::Radians";
 		return os;
 	}
 
-	inline std::ostream& operator << (std::ostream& os, const Percent& it) {
-		os << it.get() * 100.0 << "%";
+	long precisison = 1000;
+
+	long gcdnum = std::gcd((long)round(pie_ratio * precisison), precisison);
+
+	double numerator = (pie_ratio * precisison) / (double)gcdnum;
+	long denominator = precisison / gcdnum;
+
+	if (abs(numerator - 1) < 1e-6) {
+		os << "pi" << "/" << denominator << " Space2D::Radians";
 		return os;
 	}
 
+	if (denominator == 1) {
+		os << numerator << "pi Space2D::Radians";
+		return os;
+	}
+
+	if (gcdnum == 1) {
+		os << pie_ratio << "pi Space2D::Radians";
+		return os;
+	}
+
+	os << numerator << "pi/" << denominator << " Space2D::Radians";
+	return os;
+}
+
+inline std::ostream& operator << (std::ostream& os, const Space2D::Degrees& it) {
+	os << it.get() << " Space2D::Degrees";
+	return os;
+}
+
+inline std::ostream& operator << (std::ostream& os, const Space2D::Percent& it) {
+	os << it.get() * 100.0 << "%";
+	return os;
 }

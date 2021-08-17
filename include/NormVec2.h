@@ -14,6 +14,11 @@ namespace Space2D {
     {
     public:
 
+		/**
+		 * @brief Construct a NormVec2 facing at angle 0 (right)
+		*/
+		constexpr NormVec2() : NormVec2(1, 0) {}
+
         /**
          * @brief Construct a NormVec2 from an x and y input, the 
          * inputs are automatically normalized to maintain invariants
@@ -251,12 +256,12 @@ namespace Space2D {
 		/**
 		 * @brief x coordinate of the NormVec2, non-modifyable
 		*/
-		const T x;
+		T x;
 
 		/**
 		 * @brief y coordinate of the NormVec2, non-modifyable
 		*/
-		const T y;
+		T y;
     };
 }
 

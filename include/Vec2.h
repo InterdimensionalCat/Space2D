@@ -232,7 +232,7 @@ namespace Space2D {
 		 * @return the magnitude
 		*/
 		constexpr T mag() const noexcept {
-			return std::sqrt(x * x + y * y);
+			return sqrt<T>(x * x + y * y);
 		}
 
 		/**
